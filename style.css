@@ -1,0 +1,132 @@
+:root {
+    --red: hsl(350, 100%, 70%);
+    --blue: hsl(250, 100%, 70%);
+    --light-red: hsl(350, 100%, 80%);
+    --light-blue: hsl(250, 100%, 80%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font: 14px Tahoma;
+}
+
+main > * {
+    margin: 0.75rem 0;
+}
+
+form {
+    background: whitesmoke;
+    border: 2px solid var(--light-red);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0;
+    width: 75%;
+}
+
+label {
+    font-weight:600;
+    color: hsl(0, 0%, 60%);
+}
+
+input, textarea, button {
+    margin-top: 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.2rem;
+    outline: none;
+}
+
+input, textarea {
+    text-indent: 0.5rem;
+}
+
+input:focus, textarea:focus {
+    background: hsl(350, 70%, 98%);
+}
+
+input {
+    height: 1.75rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: small;
+    color: white;
+    text-align: center;
+    background: var(--red);
+}
+
+button:hover {
+    background: var(--light-red);
+}
+
+.projects {
+    border-radius: 0.2rem;
+}
+
+.projects h3 {
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: white;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0 1.5rem;
+    min-height: 2rem;
+}
+
+.projects ul li {
+    background: white;
+    border-radius: 0.2rem;
+    padding: 0.25rem 1rem;
+    box-shadow: 1px 1px 5px 1px gray;
+    margin-bottom: 0.5rem;
+}
+
+.projects ul li h4 {
+   display: flex;
+   justify-content: space-between;
+}
+
+.projects.active {
+    border: 2px solid var(--light-red);
+}
+.projects.active.droppable {
+    background-color: hsla(350, 100%, 80%, 0.25);
+}
+
+.projects.active h3 {
+    background: var(--light-red);
+    text-shadow: 2px 2px var(--red);
+}
+
+.projects.active ul li h4 {
+    color: var(--red);
+}
+
+.projects.finished {
+    border: 2px solid var(--light-blue);
+}
+.projects.finished.droppable {
+    background-color: hsla(250, 100%, 80%, 0.25);
+}
+
+.projects.finished h3 {
+    background: var(--light-blue);
+    text-shadow: 2px 2px var(--blue);
+}
+
+.projects.finished ul li h4 {
+    color: var(--blue);
+}
